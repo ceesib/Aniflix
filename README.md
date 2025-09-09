@@ -124,13 +124,4 @@ This is a self-directed portfolio project meant to:
 
 ---
 
-## 📁 Folder Structure (Preliminary)
-aniflix-backend/
-├── server/ # Core server + routing
-├── service/ # Business logic (Auth, Anime, User)
-├── model/ # Domain models (User, Anime, Episode)
-├── db/ # DB connection and queries
-├── util/ # Utilities (JWT, JSON, etc.)
-├── Main.java # App entry point
-└── README.md
 
