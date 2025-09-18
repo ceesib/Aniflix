@@ -1,1 +1,5 @@
-/home/prime/Documents/MyServer/simple-http-server/src/main/java/com/example/App.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/ClientHandler.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Configuration.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Request.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Response.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/SimpleHttpServer.java

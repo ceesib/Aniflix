@@ -1,4 +1,4 @@
-package com.example;
+package com.core;
 
 public class Response {
     
