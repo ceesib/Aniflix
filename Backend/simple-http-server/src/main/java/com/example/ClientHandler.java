@@ -30,50 +30,17 @@ public class ClientHandler implements Runnable {
                 System.out.println("The request line is: " + requestLine);
 
                 Request request = new Request(requestLine);
-
-                /* 
-                String[] requestLineParts = requestLine.split(" ");
-                String method = requestLineParts[0];
-                String path = requestLineParts[1];
-                String version = requestLineParts[2];
-                */
-
-                
-
-
-                //System.out.println("method: " + method + " path: " + path + " version: " + version);
-
-
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-
-                //Map<String, String> headers = new HashMap<>();
-
                 request.setHeaders(in);
-
-                /* 
-                String headerLine;
-                while(!(headerLine = in.readLine()).isEmpty()){
-                    //System.out.println(headerLine);
-                    String[] headerParts = headerLine.split(":", 2);
-                    if(headerParts.length == 2){
-                        headers.put(headerParts[0].trim(), headerParts[1].trim());
-                    }
-                }
-                */
-
-                //System.out.println("Headers: " + request.getHeaders());
 
 
                 if(request.getMethod().equals("GET")){
-                    if(request.getPath().equals("/")){
-                        sendResponse(out, "200 OK", "text/html", "<h1>Welcome to Aniflix!</h1>");
-                    }
-                    else{
-                        sendResponse(out, "404 Not Found", "text/html", "<h1>404 - Page Not Found</h1>");
-                    }
-                }else{
-                    sendResponse(out, "405 Method Not Allowed", "text/html", "<h1>405 - Method Not Allowed</h1>" );
+                    if(request.getPath().equals("/")) sendResponse(out, "200 OK", "text/html", "<h1>Welcome to Aniflix!</h1>");
+                    
+                    else sendResponse(out, "404 Not Found", "text/html", "<h1>404 - Page Not Found</h1>");   
                 }
+                else sendResponse(out, "405 Method Not Allowed", "text/html", "<h1>405 - Method Not Allowed</h1>" );
+                
 
         
 
