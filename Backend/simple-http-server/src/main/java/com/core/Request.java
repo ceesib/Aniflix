@@ -1,5 +1,4 @@
 package com.example;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,17 +11,13 @@ public class Request {
     String version;
     HashMap<String, String> headers;
 
-
-
    public Request(String requestLine){
-
         String[] requestLineParts = requestLine.split(" ");
         this.method = requestLineParts[0];
         this.path = requestLineParts[1];
         this.version = requestLineParts[2];
 
    }
-
 
    public void setHeaders(BufferedReader in){
 
