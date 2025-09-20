@@ -15,6 +15,7 @@ public class ConfigurationManager{
         this.configFile = new File(filepath);
         this.objectMapper = new ObjectMapper();
     }
+
     public JsonNode readFile() throws IOException{
         return this.objectMapper.readTree(this.configFile); 
     }

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\ClientHandler.java
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\Configuration.java
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\ConfigurationManager.java
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\Request.java
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\Response.java
 C:\Users\ceejaysibeko\Downloads\Aniflix\Aniflix\Backend\simple-http-server\src\main\java\com\core\SimpleHttpServer.java
+=======
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/ClientHandler.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Configuration.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Request.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/Response.java
+/home/prime/Documents/Aniflix/Aniflix/Backend/simple-http-server/src/main/java/com/core/SimpleHttpServer.java
+>>>>>>> 25357f4a5697a4f1f805be1758d596576120bcb8

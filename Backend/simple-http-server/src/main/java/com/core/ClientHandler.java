@@ -6,7 +6,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class ClientHandler implements Runnable {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+public class ClientHandler extends Thread{
+    Logger LOGGER = LoggerFactory.getLogger(ClientHandler.class);
 
     private Socket clientSocket;
 
@@ -27,7 +32,7 @@ public class ClientHandler implements Runnable {
 
             if(requestLine == null || requestLine.isEmpty()) return;
                 
-                System.out.println("The request line is: " + requestLine);
+                LOGGER.info("The request line is: {}",requestLine);
 
                 Request request = new Request(requestLine);
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
@@ -50,7 +55,7 @@ public class ClientHandler implements Runnable {
         }finally{
             try {
                 clientSocket.close();
-                System.out.println("Client connection closed.");
+                LOGGER.info("Client connection closed.");
             } catch (IOException e) {
                 e.printStackTrace();
             }
