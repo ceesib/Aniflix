@@ -1,7 +1,7 @@
-package com.example;
+package com.core;
 
 public class Configuration{
-    int port;
+    private int port;
 
     public void setPort(int port){
         this.port = port;
@@ -9,5 +9,4 @@ public class Configuration{
     public int getPort(){
         return this.port;
     }
-
 }

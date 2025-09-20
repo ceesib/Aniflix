@@ -1,19 +1,22 @@
-package com.example;
+package com.core;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import com.fasterxml.jackson.databind.*;
 
 public class SimpleHttpServer 
 {
-    public static void main( String[] args )
-    {
-        int port = 8080;
+    public static void main( String[] args ){
 
-        try(ServerSocket serverSocket = new ServerSocket(port)){
-
+        
+        try{
+            
+            ConfigurationManager cm = new ConfigurationManager("Backend/simple-http-server/src/main/java/com/core/config.json");
+            JsonNode node = cm.readFile();
+            int port =  node.get("port").asInt();
+            ServerSocket serverSocket = new ServerSocket(port);
             System.out.println("Server started. Listening on port: " + port);
-
 
             while(true){
 
@@ -25,6 +28,7 @@ public class SimpleHttpServer
                 
             }
         }catch(IOException e){
+            
             e.printStackTrace();
         }
     }
