@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 public class Request {
     
 
-    String method;
+    Method method;
     String path;
     String version;
     HashMap<String, String> headers;
@@ -18,7 +18,7 @@ public class Request {
 
    public Request(String requestLine){
         String[] requestLineParts = requestLine.split(" ");
-        this.method = requestLineParts[0];
+        this.method = Method.valueOf(requestLineParts[0]);
         this.path = requestLineParts[1];
         this.version = requestLineParts[2];
    }
@@ -44,7 +44,7 @@ public class Request {
         return headers;
    }
 
-    public String getMethod() {
+    public Method getMethod() {
         return method;
     }
 

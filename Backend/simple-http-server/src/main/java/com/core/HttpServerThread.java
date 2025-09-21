@@ -12,7 +12,6 @@ public class HttpServerThread extends Thread{
     private int port;
     public HttpServerThread(int port){
         this.port = port;
-
     }
     @Override
     public void run(){

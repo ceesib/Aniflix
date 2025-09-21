@@ -14,7 +14,5 @@ public class SimpleHttpServer
         var port =  node.get("port").asInt();
         var httpServerThread = new HttpServerThread(port);
         httpServerThread.start();
-        
-  
     }
 }
